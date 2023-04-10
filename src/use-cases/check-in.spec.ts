@@ -83,7 +83,7 @@ describe('Check In Use Case', () => {
 
     expect(checkIn.id).toEqual(expect.any(String));
   });
-  it('should no be able to check in on distant gym', async () => {
+  it('should not be able to check in on distant gym', async () => {
     await inMemoryGymsRepository.create({
       id: 'gym-02',
       title: 'JavaScript Gym',
