@@ -1,7 +1,6 @@
 import { z } from 'zod';
 import { FastifyRequest, FastifyReply } from 'fastify';
 
-import { UserAlreadyExistsError } from '@/use-cases/errors/user-already-exists-error';
 import { makeCreateGymUseCase } from '@/use-cases/factories/make-create-gym-use-case';
 
 export async function create(
