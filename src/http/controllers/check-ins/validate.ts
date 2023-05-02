@@ -19,11 +19,11 @@ export async function validate(
 
   try {
     const validateUseCase = makeValidateCheckInUseCase();
-    const { checkIn } = await validateUseCase.execute({
+    await validateUseCase.execute({
       checkInId,
     });
 
-    return replay.status(204).send(checkIn);
+    return replay.status(204).send();
   } catch (err) {
     if (err instanceof LateCheckInValidationError) {
       return replay.status(400).send({ message: err.message });

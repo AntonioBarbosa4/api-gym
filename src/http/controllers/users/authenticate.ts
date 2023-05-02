@@ -3,7 +3,6 @@ import { FastifyRequest, FastifyReply } from 'fastify';
 
 import { InvalidCredentialsError } from '@/use-cases/errors/invalid-credentials-error';
 import { makeAuthenticateUseCase } from '@/use-cases/factories/make-authenticate-use-case';
-import { sign } from 'crypto';
 
 export async function authenticate(
   request: FastifyRequest,
